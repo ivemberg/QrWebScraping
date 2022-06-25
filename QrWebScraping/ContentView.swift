@@ -68,33 +68,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-func pageParser(_ htmlPage: String) -> [(String, Int, String)] {
-    var output: [(String, Int, String)] = []
-    let splitted = htmlPage.split(separator: "\n")
-    var counterTitle: Int = 0
-    var counterParagraph: Int = 0
-    
-    for i in 0..<splitted.count {
-        if splitted[i].contains("<title>") {
-            output.append(("title",
-                           counterTitle,
-                           String(splitted[i].suffix(splitted[i].count - 7).prefix(splitted[i].count - 27))))
-            counterTitle += 1
-        }
-        
-        if splitted[i].contains("<p>") {
-            output.append(("p",
-                           counterParagraph,
-                           String(splitted[i])))
-            counterParagraph += 1
-        }
-    }
-    
-    print("Output: \(output)")
-    
-    return output
-}
-
 func getQRCodeDate(text: String) -> Data? {
     guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
     let data = text.data(using: .ascii, allowLossyConversion: false)
