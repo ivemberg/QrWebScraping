@@ -11,6 +11,9 @@
 		3C47D91D2865F8E80023CCBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47D91C2865F8E80023CCBF /* ContentView.swift */; };
 		3C47D91F2865F8EA0023CCBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C47D91E2865F8EA0023CCBF /* Assets.xcassets */; };
 		3C47D9222865F8EA0023CCBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C47D9212865F8EA0023CCBF /* Preview Assets.xcassets */; };
+		3C47D92A286605900023CCBF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 3C47D929286605900023CCBF /* SwiftSoup */; };
+		3C47D92D286605BA0023CCBF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 3C47D92C286605BA0023CCBF /* SwiftSoup */; };
+		3C47D92F28660B5B0023CCBF /* WebScraping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47D92E28660B5B0023CCBF /* WebScraping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,7 @@
 		3C47D91C2865F8E80023CCBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C47D91E2865F8EA0023CCBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C47D9212865F8EA0023CCBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C47D92E28660B5B0023CCBF /* WebScraping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScraping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C47D92A286605900023CCBF /* SwiftSoup in Frameworks */,
+				3C47D92D286605BA0023CCBF /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,7 @@
 				3C47D91C2865F8E80023CCBF /* ContentView.swift */,
 				3C47D91E2865F8EA0023CCBF /* Assets.xcassets */,
 				3C47D9202865F8EA0023CCBF /* Preview Content */,
+				3C47D92E28660B5B0023CCBF /* WebScraping.swift */,
 			);
 			path = QrWebScraping;
 			sourceTree = "<group>";
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = QrWebScraping;
+			packageProductDependencies = (
+				3C47D929286605900023CCBF /* SwiftSoup */,
+				3C47D92C286605BA0023CCBF /* SwiftSoup */,
+			);
 			productName = QrWebScraping;
 			productReference = 3C47D9172865F8E80023CCBF /* QrWebScraping.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,10 @@
 				Base,
 			);
 			mainGroup = 3C47D90E2865F8E80023CCBF;
+			packageReferences = (
+				3C47D928286605900023CCBF /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				3C47D92B286605BA0023CCBF /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 3C47D9182865F8E80023CCBF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C47D92F28660B5B0023CCBF /* WebScraping.swift in Sources */,
 				3C47D91D2865F8E80023CCBF /* ContentView.swift in Sources */,
 				3C47D91B2865F8E80023CCBF /* QrWebScrapingApp.swift in Sources */,
 			);
@@ -337,6 +353,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C47D928286605900023CCBF /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3C47D92B286605BA0023CCBF /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C47D929286605900023CCBF /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C47D928286605900023CCBF /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		3C47D92C286605BA0023CCBF /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C47D928286605900023CCBF /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C47D90F2865F8E80023CCBF /* Project object */;
 }
